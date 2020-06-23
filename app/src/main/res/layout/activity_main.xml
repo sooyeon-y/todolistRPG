@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/date_left"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:text="◀ "
+        android:textSize="24dp"
+        />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="current date"
+        android:textSize="24dp"
+        android:layout_toRightOf="@+id/date_left"
+        />
+
+    <TextView
+        android:id="@+id/date_right"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text=" ▶"
+        android:textSize="24dp"
+        android:layout_toRightOf="@+id/date"
+        />
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Lv. xxx / exp: 0%"
+        android:textSize="20dp"
+        android:layout_toLeftOf="@id/exp_bar"
+        android:layout_marginRight="5dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/exp_bar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="50dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:progress="40"
+        android:layout_alignParentRight="true"
+        />
+
+    <ListView
+        android:id="@+id/totalListView"
+        android:layout_width="fill_parent"
+        android:layout_height="270dp"
+        android:longClickable="true"
+        android:layout_below="@+id/date"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/add_list_edittext"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:hint="일정 입력"
+        android:textSize="24dp"
+        android:layout_below="@+id/totalListView"
+        android:inputType="text"
+        />
+
+        <Button
+            android:id="@+id/add_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="추가"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:layout_below="@+id/add_list_edittext"
+            android:layout_toLeftOf="@+id/save_day"
+            />
+
+        <Button
+            android:id="@+id/save_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일과 종료"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/add_list_edittext"
+            />
+
+    <EditText
+        android:id="@+id/memo_text"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="30dp"
+        android:text="Hello World!"
+        android:textSize="20dp"
+        android:gravity="top"
+        android:layout_below="@+id/add_list"
+        android:background="@drawable/background_edittext"
+         />
+
+    <Button
+        android:id="@+id/clear_memo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="초기화"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:layout_below="@+id/memo_text"
+        android:layout_toLeftOf="@+id/save_memo"
+        />
+
+    <Button
+        android:id="@+id/save_memo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:layout_below="@+id/memo_text"
+        android:layout_alignParentRight="true"
+        />
+
+    <Button
+        android:id="@+id/drugButton"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="점심약"
+        android:backgroundTint="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/clear_memo"
+        />
+    <Button
+        android:id="@+id/drugButton2"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="저녁약"
+        android:backgroundTint="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/clear_memo"
+        android:layout_toRightOf="@+id/drugButton"
+        />
+    <Button
+        android:id="@+id/drugButton3"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="새벽약"
+        android:backgroundTint="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/clear_memo"
+        android:layout_toRightOf="@+id/drugButton2"
+        />
+
+
+
+</RelativeLayout>
